@@ -1,30 +1,8 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Developer CV
-% LaTeX Template
-% Version 1.0 (28/1/19)
-%
-% This template originates from:
-% http://www.LaTeXTemplates.com
-%
-% Authors:
-% Jan Vorisek (jan@vorisek.me)
-% Based on a template by Jan Küster (info@jankuester.com)
-% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
-%
-% License:
-% The MIT License (see included LICENSE file)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
 \documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
+\begin{document}
 
 %----------------------------------------------------------------------------------------
 
-\begin{document}
 
 %----------------------------------------------------------------------------------------
 %	TITLE AND CONTACT INFORMATION
@@ -76,12 +54,13 @@
 \begin{minipage}[t]{0.4\textwidth} % 40% of the page width for the introduction text
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
-    I consider myself principally a Python developer. I have spent the past
-    three years developing a diverse range of software in Python, from ETL
-    pipelines to password generators to combinatoric optimizers. But by far most
-    of my time has been spent developing a single web application, consisting of
-    $\approx$ 14,000 lines of code in Python, Flask, and SQLAlchemy, in the
-    pursuit of my obsession with literature:
+    I prefer Python, but I wear many hats. I have written code in C\#,
+    Python, vanilla JavaScript, and ReactJS. I have built static sites in
+    GatsbyJS, interfaces in WPF, and web scrapers and ETL scripts in Python. I
+    even built an arduino-based PID controller for a popcorn popper to roast my
+    own coffee. But by far most of my time has been spent developing a single
+    web technology, consisting of $\approx$ 14,000 lines of code in Python,
+    Flask, and SQLAlchemy, in the pursuit of my obsession with literature:
     {\href{https://github.com/malan88/icc}{anno.wiki}}.
 \end{minipage}
 \hfill % Whitespace between
@@ -97,18 +76,18 @@
 	\end{barchart}
 \end{minipage}
 
-\begin{center}
-	\bubbles{
-        5/{\href{https://neovim.io/}{neovim}},
-        3/{\href{https://aws.amazon.com/}{AWS}},
-        4/{\href{https://www.heroku.com/}{Heroku}},
-        3/{\href{https://mariadb.org/}{MariaDB}},
-        3/{\href{https://www.gnu.org/software/bash/}{BASH}},
-        2/{\href{https://gnupg.org/}{GPG}},
-        5/{\href{https://sass-lang.com/}{Sass}},
-        5/{\href{https://www.linux.org/}{Linux}}
-    }
-\end{center}
+%\begin{center}
+%	\bubbles{
+%        5/{\href{https://neovim.io/}{neovim}},
+%        3/{\href{https://aws.amazon.com/}{AWS}},
+%        4/{\href{https://www.heroku.com/}{Heroku}},
+%        3/{\href{https://mariadb.org/}{MariaDB}},
+%        3/{\href{https://www.gnu.org/software/bash/}{BASH}},
+%        2/{\href{https://gnupg.org/}{GPG}},
+%        5/{\href{https://sass-lang.com/}{Sass}},
+%        5/{\href{https://www.linux.org/}{Linux}}
+%    }
+%\end{center}
 
 %----------------------------------------------------------------------------------------
 %	EXPERIENCE
@@ -118,7 +97,66 @@
 
 \begin{entrylist}
 	\entry
-		{2020}
+		{2017 -- 2019}
+        {{\href{https://github.com/Anno-Wiki/icc}{Intertextual Canon Cloud (anno.wiki)}}}
+		{Flask App}
+        {The ICC is a web application designed to allow for collaboratively
+        building an exhaustive and definitive repository of annotated
+        literature. I designed, developed, deployed, and continue to maintain
+        the project solo, managing occasionally to rope in some programmer
+        friends for help with various features. It consists of $\approx$ 14k
+        lines of code and $\approx$ 100k lines of code churn. The backend uses
+        Flask/SQLAlchemy. The frontend uses Jinja2, Sass, and VanillaJS. I also
+        had to write several ETL data pipelines for processing
+        {\href{https://gutenberg.org}{Project Gutenberg}} texts. Deployed via
+        Heroku. I learned the entire web application life cycle on this project,
+        and it continues to teach me. It is currently maintained at
+        {\href{https://anno.wiki}{anno.wiki}}.
+        \\
+        \texttt{{\href{https://www.python.org/}{Python}}}\slashsep
+        \texttt{{\href{https://flask.palletsprojects.com/en/1.1.x/}{Flask}}}\slashsep
+        \texttt{{\href{https://www.sqlalchemy.org/}{SQLAlchemy}}}\slashsep
+        \texttt{{\href{https://mariadb.org/}{MariaDB}}}\slashsep
+        \texttt{{\href{https://www.elastic.co/}{Elasticsearch}}}\slashsep
+        \texttt{{\href{https://docs.pytest.org/en/stable/}{pytest}}}\slashsep
+        \texttt{{\href{https://www.heroku.com/}{Heroku}}}
+        }
+	\entry
+		{2019 -- Current}
+        {{\href{https://github.com/Anno-Wiki}{Intertextual Canon Cloud 2}}}
+		{Flask/React App}
+        {
+            Second iteration of anno.wiki/ICC with improved data architecture
+            and a single-page application front end based in React.  Using
+            Elasticsearch to store texts and PostgreSQL to store annotations and
+            general application data allows for faster line searching. Also
+            wrote more sophisticated text processors for breaking text into 100k
+            byte chunks and annotating stylistic elements, while stripping all
+            styling from the raw text.
+        \\
+        \texttt{{\href{https://www.python.org/}{Python}}}\slashsep
+        \texttt{{\href{https://flask.palletsprojects.com/en/1.1.x/}{Flask}}}\slashsep
+        \texttt{{\href{https://www.sqlalchemy.org/}{SQLAlchemy}}}\slashsep
+        \texttt{{\href{https://www.elastic.co/}{Elasticsearch}}}\slashsep
+        \texttt{{\href{https://www.postgresql.org/}{PostgreSQL}}}\slashsep
+        \texttt{{\href{https://www.docker.com/}{Docker}}}\slashsep
+        \texttt{{\href{https://auth0.com/}{Auth0}}}\slashsep
+        \texttt{{\href{https://reactjs.org/}{ReactJS}}}
+        }
+	\entry
+		{2020 -- Current}
+        {\href{https://euler-sci.com}{Euler Sciences LLC}}
+		{Contract Developer}
+        {Developed GUI interface for laser system meant to treat skin
+        conditions. Also developed the company website.
+        \\
+        \texttt{{\href{https://en.wikipedia.org/wiki/C_Sharp_(programming_language)}{C\#}}}\slashsep
+        \texttt{{\href{https://en.wikipedia.org/wiki/Windows_Presentation_Foundation}{Windows Presentation Foundation}}}\slashsep
+        \texttt{{\href{https://www.sqlite.org/index.html}{SQLite}}}\slashsep
+        \texttt{{\href{https://www.gatsbyjs.org/}{GatsbyJS}}}
+        }
+	\entry
+		{2020 -- Current}
         {Healthy Brands, LLC}
 		{Contract Developer}
         {
@@ -132,37 +170,6 @@
         \texttt{{\href{https://www.twilio.com/}{Twilio}}}\slashsep
         \texttt{{\href{https://aws.amazon.com/ec2/}{AWS EC2}}}\slashsep
         \texttt{{\href{https://github.com/tmux/tmux}{tmux}}}
-        }
-	\entry
-		{2018 -- Current}
-        {{\href{https://github.com/malan88/icc}{anno.wiki (Intertextual Canon Cloud)}}}
-		{Flask App}
-        {Designed, developed, launched, and maintained solo. $\approx$ 14,000
-        lines of code. Backend using Flask/SQLAlchemy. Frontend using Jinja2,
-        Sass, and VanillaJS. Wrote many ETL data pipelines for processing
-        {\href{https://gutenberg.org}{Project Gutenberg}} texts. Required an
-        incredible amount of problem solving. Learned entire web application
-        life cycle. Maintained at {\href{https://anno.wiki}{anno.wiki}}.
-        \\
-        \texttt{{\href{https://www.python.org/}{Python}}}\slashsep
-        \texttt{{\href{https://flask.palletsprojects.com/en/1.1.x/}{Flask}}}\slashsep
-        \texttt{{\href{https://www.sqlalchemy.org/}{SQLAlchemy}}}\slashsep
-        \texttt{{\href{https://mariadb.org/}{MariaDB}}}\slashsep
-        \texttt{{\href{https://www.elastic.co/}{Elasticsearch}}}\slashsep
-        \texttt{{\href{https://docs.pytest.org/en/stable/}{pytest}}}\slashsep
-        \texttt{{\href{https://www.heroku.com/}{Heroku}}}
-        }
-	\entry
-		{2020 -- Current}
-        {\href{https://euler-sci.com}{Euler Sciences LLC}}
-		{Contract Developer}
-        {Developed GUI interface for laser system meant to treat skin
-        conditions. Also developed the company website.
-        \\
-        \texttt{{\href{https://en.wikipedia.org/wiki/C_Sharp_(programming_language)}{C\#}}}\slashsep
-        \texttt{{\href{https://en.wikipedia.org/wiki/Windows_Presentation_Foundation}{Windows Presentation Foundation}}}\slashsep
-        \texttt{{\href{https://www.sqlite.org/index.html}{SQLite}}}\slashsep
-        \texttt{{\href{https://www.gatsbyjs.org/}{GatsbyJS}}}
         }
     \entry
         {2020}
@@ -229,7 +236,7 @@
 	\cvsect{Languages}
 
         \textbf{English} — native,\\
-        \textbf{French} — proficient,\\
+        \textbf{French} — fluent,\\
         \textbf{Spanish} — rudimentary
 
 \end{minipage}
@@ -239,8 +246,8 @@
 
 	\cvsect{Free Time}
 
-	I love high culture. Wine, literature, music, art, cinema; anything that
-    makes life worth living. And running.
+    I love high culture. Coffee, wine, cheese, cocktails, literature, music,
+    art, cinema, science; anything that makes life worth living. And running.
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.35\textwidth}
