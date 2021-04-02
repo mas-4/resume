@@ -41,6 +41,7 @@
 \pagestyle{empty} % No headers or footers
 
 \usepackage{moresize} % Provides more font size commands (\HUGE and \ssmall)
+\usepackage{enumitem}
 
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT
@@ -203,4 +204,4 @@
 	}\\\\}
 
 % Command to output a separator slash between lists, e.g. '  /  '
-\newcommand{\slashsep}{\hspace{3mm}/\hspace{3mm}}
+\newcommand{\slashsep}{\hspace{2mm}/\hspace{2mm}}
