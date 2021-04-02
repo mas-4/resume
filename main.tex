@@ -5,79 +5,80 @@
 
 
 %----------------------------------------------------------------------------------------
-%	TITLE AND CONTACT INFORMATION
+%   TITLE AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
 \begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
+    \vspace{-\baselineskip} % Required for vertically aligning minipages
 
-	% If your name is very short, use just one of the lines below
-	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
-	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Michael}}}}} % First name
+    % If your name is very short, use just one of the lines below
+    % If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
+    \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Michael}}}}} % First name
 
-	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Sendker}}}}} % Last name
+    \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Sendker}}}}} % Last name
 
-	\vspace{6pt}
+    \vspace{6pt}
 
-	{\huge Software Developer} % Career or current job title
+    {\huge Software Developer} % Career or current job title
 \end{minipage}
 \begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
+    \vspace{-\baselineskip} % Required for vertically aligning minipages
 
-	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	\icon{MapMarker}{12}{Tarpon Springs, FL}\\
+    % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+    % Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+    \icon{MapMarker}{12}{Tarpon Springs, FL}\\
     \icon{Phone}{12}{+1 (727) 272-3915}\\
-	\icon{Envelope}{12}{\href{mailto:m@stdwtr.io}{m@stdwtr.io}}\\
-	\icon{Linkedin}{12}{\href{https://linkedin.com/in/michael-sendker}{michael-sendker}}\\
+    \icon{Envelope}{12}{\href{mailto:m@stdwtr.io}{m@stdwtr.io}}\\
+    \icon{Linkedin}{12}{\href{https://linkedin.com/in/michael-sendker}{michael-sendker}}\\
 \end{minipage}
 \begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
+    \vspace{-\baselineskip} % Required for vertically aligning minipages
 
-	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	\icon{Globe}{12}{\href{https://standingwater.io}{standingwater.io}}\\
-	\icon{Globe}{12}{\href{https://blog.standingwater.io}{blog.standingwater.io}}\\
-	\icon{Github}{12}{\href{https://github.com/malan88}{malan88}}\\
-	\icon{StackOverflow}{12}{\href{https://stackoverflow.com/story/malan88}{malan88}}\\
+    % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+    % Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+    \icon{Globe}{12}{\href{https://standingwater.io}{standingwater.io}}\\
+    \icon{Globe}{12}{\href{https://blog.standingwater.io}{blog.standingwater.io}}\\
+    \icon{Github}{12}{\href{https://github.com/malan88}{malan88}}\\
+    \icon{StackOverflow}{12}{\href{https://stackoverflow.com/story/malan88}{malan88}}\\
 \end{minipage}
 
 % this vspace is largely useless and causes me to have trouble fitting everything
 %\vspace{0.5cm}
 
 %----------------------------------------------------------------------------------------
-%	INTRODUCTION, SKILLS AND TECHNOLOGIES
+%   INTRODUCTION, SKILLS AND TECHNOLOGIES
 %----------------------------------------------------------------------------------------
 
 \cvsect{Who I Am}
 
-\begin{minipage}[t]{0.4\textwidth} % 40% of the page width for the introduction text
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
+%\begin{minipage}[t]{0.4\textwidth} % 40% of the page width for the introduction text
+%   \vspace{-\baselineskip} % Required for vertically aligning minipages
 
     I prefer Python, but I wear many hats. I have written code in C\#,
-    Python, vanilla JavaScript, and ReactJS. I have built static sites in
-    GatsbyJS, interfaces in WPF, and web scrapers and ETL scripts in Python. I
-    even built an arduino-based PID controller for a popcorn popper to roast my
-    own coffee. But by far most of my time has been spent developing a single
-    web technology, consisting of $\approx$ 14,000 lines of code in Python,
-    Flask, and SQLAlchemy, in the pursuit of my obsession with literature:
+    Python, vanilla JavaScript, and ReactJS. I have dabbled in C, Scheme, C++,
+    and Bash. I have built static sites in GatsbyJS, interfaces in WPF, and web
+    scrapers and bots in Python. I even built an arduino-based PID controller
+    for a popcorn popper to roast my own coffee. But by far most of my time has
+    been spent developing a single web technology, consisting of $\approx$
+    14,000 lines of code in Python, Flask, and SQLAlchemy, in the pursuit of my
+    obsession with literature:
     {\href{https://github.com/malan88/icc}{anno.wiki}}.
-\end{minipage}
-\hfill % Whitespace between
-\begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	\begin{barchart}{5.5}
-        \baritem{ {\href{https://www.python.org/}{Python}} }{100}
-        \baritem{ {\href{https://flask.palletsprojects.com/en/1.1.x/}{Flask}} }{100}
-        \baritem{ {\href{https://www.sqlalchemy.org/}{SQLAlchemy}} }{90}
-		\baritem{ {\href{https://en.wikipedia.org/wiki/JavaScript}{JavaScript}} }{80}
-		\baritem{ {\href{https://www.djangoproject.com/}{Django}} }{70}
-		\baritem{ {\href{https://reactjs.org/}{ReactJS}} }{80}
-	\end{barchart}
-\end{minipage}
+%\end{minipage}
+%\hfill % Whitespace between
+%\begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
+%   \vspace{-\baselineskip} % Required for vertically aligning minipages
+%   \begin{barchart}{5.5}
+%        \baritem{ {\href{https://www.python.org/}{Python}} }{100}
+%        \baritem{ {\href{https://flask.palletsprojects.com/en/1.1.x/}{Flask}} }{100}
+%        \baritem{ {\href{https://www.sqlalchemy.org/}{SQLAlchemy}} }{90}
+%       \baritem{ {\href{https://en.wikipedia.org/wiki/JavaScript}{JavaScript}} }{80}
+%       \baritem{ {\href{https://www.djangoproject.com/}{Django}} }{70}
+%       \baritem{ {\href{https://reactjs.org/}{ReactJS}} }{80}
+%   \end{barchart}
+%\end{minipage}
 
 %\begin{center}
-%	\bubbles{
+%   \bubbles{
 %        5/{\href{https://neovim.io/}{neovim}},
 %        3/{\href{https://aws.amazon.com/}{AWS}},
 %        4/{\href{https://www.heroku.com/}{Heroku}},
@@ -90,16 +91,16 @@
 %\end{center}
 
 %----------------------------------------------------------------------------------------
-%	EXPERIENCE
+%   EXPERIENCE
 %----------------------------------------------------------------------------------------
 
 \cvsect{Experience}
 
 \begin{entrylist}
-	\entry
-		{2017 -- 2019}
+    \entry
+        {2017 -- 2019}
         {{\href{https://github.com/Anno-Wiki/icc}{Intertextual Canon Cloud (anno.wiki)}}}
-		{Flask App}
+        {Flask App}
         {The ICC is a web application designed to allow for collaboratively
         building an exhaustive and definitive repository of annotated
         literature. I designed, developed, deployed, and continue to maintain
@@ -108,10 +109,10 @@
         lines of code and $\approx$ 100k lines of code churn. The backend uses
         Flask/SQLAlchemy. The frontend uses Jinja2, Sass, and VanillaJS. I also
         had to write several ETL data pipelines for processing
-        {\href{https://gutenberg.org}{Project Gutenberg}} texts. Deployed via
-        Heroku. I learned the entire web application life cycle on this project,
-        and it continues to teach me. It is currently maintained at
-        {\href{https://anno.wiki}{anno.wiki}}.
+        {\href{https://gutenberg.org}{Project Gutenberg}} texts. It is deployed
+        via Heroku. I learned the entire web application life cycle on this
+        project, and it continues to teach me. It is currently maintained at
+        {\href{https://anno.wiki}{https://anno.wiki}}.
         \\
         \texttt{{\href{https://www.python.org/}{Python}}}\slashsep
         \texttt{{\href{https://flask.palletsprojects.com/en/1.1.x/}{Flask}}}\slashsep
@@ -121,18 +122,18 @@
         \texttt{{\href{https://docs.pytest.org/en/stable/}{pytest}}}\slashsep
         \texttt{{\href{https://www.heroku.com/}{Heroku}}}
         }
-	\entry
-		{2019 -- Current}
+    \entry
+        {2019 -- Current}
         {{\href{https://github.com/Anno-Wiki}{Intertextual Canon Cloud 2}}}
-		{Flask/React App}
+        {Flask/React App}
         {
-            Second iteration of anno.wiki/ICC with improved data architecture
-            and a single-page application front end based in React.  Using
-            Elasticsearch to store texts and PostgreSQL to store annotations and
-            general application data allows for faster line searching. Also
-            wrote more sophisticated text processors for breaking text into 100k
-            byte chunks and annotating stylistic elements, while stripping all
-            styling from the raw text.
+            This is the second iteration of the ICC, with improved data
+            architecture and a single-page application front end based in React.
+            Using Elasticsearch to store texts and PostgreSQL to store
+            annotations and general application data allows for faster
+            incremental searching. I also wrote more sophisticated text
+            processors for breaking text into 100k byte chunks and annotating
+            stylistic elements, while stripping all styling from the raw text.
         \\
         \texttt{{\href{https://www.python.org/}{Python}}}\slashsep
         \texttt{{\href{https://flask.palletsprojects.com/en/1.1.x/}{Flask}}}\slashsep
@@ -143,97 +144,86 @@
         \texttt{{\href{https://auth0.com/}{Auth0}}}\slashsep
         \texttt{{\href{https://reactjs.org/}{ReactJS}}}
         }
-	\entry
-		{2020 -- Current}
+    \entry
+        {2020 -- Current}
         {\href{https://euler-sci.com}{Euler Sciences LLC}}
-		{Contract Developer}
-        {Developed GUI interface for laser system meant to treat skin
-        conditions. Also developed the company website.
+        {Contract Developer}
+        {I worked on a GUI interface for laser system meant to treat skin
+        conditions. I also developed the company website in GatsbyJS (and did
+        the graphical work myself in Photoshop).
         \\
         \texttt{{\href{https://en.wikipedia.org/wiki/C_Sharp_(programming_language)}{C\#}}}\slashsep
         \texttt{{\href{https://en.wikipedia.org/wiki/Windows_Presentation_Foundation}{Windows Presentation Foundation}}}\slashsep
         \texttt{{\href{https://www.sqlite.org/index.html}{SQLite}}}\slashsep
+        \texttt{{\href{https://www.adobe.com/products/photoshop.html}{Photoshop}}}\slashsep
         \texttt{{\href{https://www.gatsbyjs.org/}{GatsbyJS}}}
         }
-	\entry
-		{2020 -- Current}
+    \entry
+        {2020 -- Current}
         {Healthy Brands, LLC}
-		{Contract Developer}
+        {Contract Developer}
         {
-            - Multithreaded scraper and alert system for notifying company of
-            BuyBox loss events on Amazon
-            - Launched Django-based question and answer forum
-            - Designed and maintained several WordPress sites
-            - Modified Shopify templates
+            I've worked on several projects for this company: a multithreaded
+            scraper and alert system for notifying the company of BuyBox loss
+            events on Amazon, I launched and modified a Django-based question
+            and answer forum from biostars, prepared and maintained several VPS
+            servers, one in Arch Linux, designed and maintained several
+            WordPress sites, integrated Twilio into the company's ZOHO CRM
+            software, and modified several Shopify templates.
         \\
         \texttt{{\href{https://www.python.org/}{Python}}}\slashsep
+        \texttt{{\href{https://www.crummy.com/software/BeautifulSoup/bs4/doc/}{BeautifulSoup4}}}\slashsep
+        \texttt{{\href{https://www.zoho.com/}{Zoho}}}\slashsep
         \texttt{{\href{https://www.twilio.com/}{Twilio}}}\slashsep
-        \texttt{{\href{https://aws.amazon.com/ec2/}{AWS EC2}}}\slashsep
-        \texttt{{\href{https://github.com/tmux/tmux}{tmux}}}
+        \texttt{{\href{https://wordpress.org/}{WordPress}}}\slashsep
+        \texttt{{\href{https://www.shopify.com/}{Shopify}}}
         }
     \entry
-        {2020}
-        {\href{https://language-map.com}{language-map.com}}
-        {ReactJS App}
-        {
-            ReactJS web app to show which countries speak your language. Built
-            using React Simple Maps and Material-UI components. Required
-            extensive data-gathering web scraping project.
+		{2019}
+		{Minimal Pairs Scraping Project}
+		{Scraper}
+        {I generated an Anki deck for recognizing French phonemes difficult to
+        hear for an American English speaker using “minimal pairs,” words in
+        French which differ by only one phoneme. Limit for requests was 500 per
+        day, had to save progress and download the data over several days.
         \\
-        \texttt{{\href{https://en.wikipedia.org/wiki/JavaScript}{JavaScript}}}\slashsep
-        \texttt{{\href{https://reactjs.org/}{ReactJS}}}\slashsep
-        \texttt{{\href{https://www.react-simple-maps.io/}{React Simple Maps}}}\slashsep
-        \texttt{{\href{https://material-ui.com/}{Material-UI}}}\slashsep
-        \texttt{{\href{https://www.python.org/}{Python}}}\slashsep
-        \texttt{{\href{https://www.crummy.com/software/BeautifulSoup/}{BeautifulSoup4}}}
-        }
-	\entry
-		{2020}
-        {{\href{https://twitter.com/john_and_abbie}{Letters of John and Abigail}}}
-		{Twitterbot}
-        {
-            A bot that tweets the corpus of the letters of John and Abigail
-            Adams. Hosted on AWS Lambda using AWS DynamoDB for keys to access
-            texts hosted on Netlify.
-        \\
-        \texttt{{\href{https://www.python.org/}{Python}}}\slashsep
-        \texttt{{\href{https://www.tweepy.org/}{Tweepy}}}\slashsep
-        \texttt{{\href{https://aws.amazon.com/lambda/}{AWS Lambda}}}\slashsep
-        \texttt{{\href{https://aws.amazon.com/dynamodb/}{AWS DynamoDB}}}\slashsep
-        \texttt{{\href{https://boto3.amazonaws.com/v1/documentation/api/latest/index.html}{Boto3}}}\slashsep
-        \texttt{{\href{https://www.crummy.com/software/BeautifulSoup/}{BeautifulSoup4}}}
+        \texttt{Python}\slashsep
+        \texttt{requests}\slashsep
+        \texttt{BeautifulSoup4}\slashsep
+        \texttt{json}\slashsep
+        \texttt{csv}
         }
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION
+%   EDUCATION
 %----------------------------------------------------------------------------------------
 
 \cvsect{Education}
 
 \begin{entrylist}
-	\entry
-		{2008 -- 2010}
-		{Philosophy and Classics}
-		{Florida State University}
+    \entry
+        {2008 -- 2010}
+        {Philosophy and Classics}
+        {Florida State University}
         {Focus on Ancient Philosophy, particularly Aristotle, Philosphy of Mind,
         and Symbolic Logic. Ancient Greek and Latin. President of Philosophy
         Club (2010)}
-	\entry
-		{2007 -- 2008}
-		{Philosophy}
-		{University of South Florida}
+    \entry
+        {2007 -- 2008}
+        {Philosophy}
+        {University of South Florida}
         {General introductory classes, Social Philosophy, Critical Thinking}
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
-%	ADDITIONAL INFORMATION
+%   ADDITIONAL INFORMATION
 %----------------------------------------------------------------------------------------
 
 \begin{minipage}[t]{0.2\textwidth}
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
+    \vspace{-\baselineskip} % Required for vertically aligning minipages
 
-	\cvsect{Languages}
+    \cvsect{Languages}
 
         \textbf{English} — native,\\
         \textbf{French} — fluent,\\
@@ -242,18 +232,18 @@
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.3\textwidth}
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
+    \vspace{-\baselineskip} % Required for vertically aligning minipages
 
-	\cvsect{Free Time}
+    \cvsect{Free Time}
 
     I love high culture. Coffee, wine, cheese, cocktails, literature, music,
     art, cinema, science; anything that makes life worth living. And running.
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.35\textwidth}
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
+    \vspace{-\baselineskip} % Required for vertically aligning minipages
 
-	\cvsect{Closing Argument}
+    \cvsect{Closing Argument}
 
     I have had enough experience learning new things to have full confidence in
     my ability to learn new things.
