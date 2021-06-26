@@ -51,9 +51,9 @@
 \usepackage{geometry} % Required for adjusting page dimensions and margins
 
 \geometry{
-	paper=a4paper, % Paper size, change to letterpaper for US letter size
-	top=0.5cm, % Top margin
-	bottom=1cm, % Bottom margin
+	paper=letterpaper, % Paper size, change to letterpaper for US letter size
+	top=0.2cm, % Top margin
+	bottom=0.2cm, % Bottom margin
 	left=1.5cm, % Left margin
 	right=1.5cm, % Right margin
 	headheight=0.75cm, % Header height
@@ -95,13 +95,17 @@
 
 %------------------------------------------------
 
-\usepackage{fontawesome} % Required for FontAwesome icons
+\usepackage{fontawesome5} % Required for FontAwesome icons
 
 % Command to output an icon in a black square box with text to the right
 \newcommand{\icon}[2]{% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	\vcenteredhbox{\colorbox{white}{\makebox(15,15){\textcolor{Blue}{\large\csname fa#1\endcsname}}}}% Icon and box
-	\hspace{0.2cm}% Whitespace
-	\vcenteredhbox{\textcolor{Blue}{\large#2}}% Text
+	\colorbox{Blue}{
+        \textcolor{white}{
+            \vcenteredhbox{\makebox(15,15){\large\csname fa#1\endcsname}}
+            \hspace{0.2cm}% Whitespace
+            \textbf{#2}
+        }
+    }
 }
 
 %----------------------------------------------------------------------------------------
@@ -216,7 +220,7 @@
         \textcolor{Blue}{\textbf{#2}} % Entry heading text
 		\hfill% Horizontal whitespace
 		{\footnotesize \textbf{\textcolor{black}{#3}}}\\% Right-aligned entry qualifier text
-		#4 % Entry description text
+		\large#4 % Entry description text
 	}\\\\}
 
 % Command to output a separator slash between lists, e.g. '  /  '
