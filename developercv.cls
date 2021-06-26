@@ -101,7 +101,7 @@
 \newcommand{\icon}[2]{% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
 	\colorbox{Blue}{
         \textcolor{white}{
-            \vcenteredhbox{\makebox(15,15){\large\csname fa#1\endcsname}}
+            \vcenteredhbox{\makebox(15,15){\huge\csname fa#1\endcsname}}
             \hspace{0.2cm}% Whitespace
             \textbf{#2}
         }
@@ -192,7 +192,7 @@
 % Command to output section title headings
 \newcommand{\cvsect}[1]{% The only parameter is the section text
 	\vspace{\baselineskip} % Whitespace before the section title
-	\colorbox{Sienna}{\textcolor{white}{\MakeUppercase{\textbf{#1}}}}\\% Section title
+	\colorbox{Sienna}{\textcolor{white}{\MakeUppercase{\huge\textbf{#1}}}}\\% Section title
 }
 
 %----------------------------------------------------------------------------------------
@@ -224,4 +224,4 @@
 	}\\\\}
 
 % Command to output a separator slash between lists, e.g. '  /  '
-\newcommand{\slashsep}{\hspace{2mm}/\hspace{2mm}}
+\newcommand{\slashsep}{\hspace{1mm}—\hspace{1mm}}
