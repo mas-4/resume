@@ -23,23 +23,21 @@
 \end{minipage}
 \begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
     \vspace{-\baselineskip} % Required for vertically aligning minipages
-
-    % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-    % Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-    \icon{MapMarker}{12}{Tarpon Springs, FL}\\
-    \icon{Phone}{12}{+1 (727) 272-3915}\\
-    \icon{Envelope}{12}{\href{mailto:m@stdwtr.io}{m@stdwtr.io}}\\
-    \icon{Linkedin}{12}{\href{https://linkedin.com/in/michael-sendker}{michael-sendker}}\\
+    % The first parameter is the FontAwesome icon name and the second is the
+    % text Other icons can be found by referring to fontawesome5.pdf (supplied
+    % with the template) and using the word after \fa in the command for the
+    % icon you want
+    \icon{MapMarker}{Tarpon Springs, FL}\\
+    \icon{Phone}{+1 (727) 272-3915}\\
+    \icon{Envelope}{\href{mailto:m@stdwtr.io}{m@stdwtr.io}}\\
+    \icon{Linkedin}{\href{https://linkedin.com/in/michael-sendker}{michael-sendker}}\\
 \end{minipage}
 \begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
     \vspace{-\baselineskip} % Required for vertically aligning minipages
-
-    % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-    % Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-    \icon{Globe}{12}{\href{https://standingwater.io}{standingwater.io}}\\
-    \icon{Globe}{12}{\href{https://blog.standingwater.io}{blog.standingwater.io}}\\
-    \icon{Github}{12}{\href{https://github.com/malan88}{malan88}}\\
-    \icon{StackOverflow}{12}{\href{https://stackoverflow.com/story/malan88}{malan88}}\\
+    \icon{Globe}{\href{https://standingwater.io}{standingwater.io}}\\
+    \icon{Globe}{\href{https://blog.standingwater.io}{blog.standingwater.io}}\\
+    \icon{Github}{\href{https://github.com/malan88}{malan88}}\\
+    \icon{StackOverflow}{\href{https://stackoverflow.com/story/malan88}{malan88}}\\
 \end{minipage}
 
 % this vspace is largely useless and causes me to have trouble fitting everything
@@ -59,7 +57,7 @@
     been spent developing a single web technology, consisting of $\approx$
     14,000 lines of code in Python, Flask, and SQLAlchemy, in the pursuit of my
     obsession with literature:
-    {\href{https://github.com/malan88/icc}{anno.wiki}}.\\
+    {\href{https://github.com/malan88/icc}{\textcolor{Blue}{anno.wiki}}}.\\
 
     All of this should demonstrate that I am a full time learner. I have spent
     enough time learning new things that I have full confidence in my ability to
@@ -76,6 +74,32 @@
 
 \begin{entrylist}
     \entry
+        {2021 -- Current}
+        {\href{https://mbs-standoffs.com}{HtmMbs LLC}}
+        {General Developer}
+        {
+            I built a sophisticated perpetual inventory system for the company,
+            to help prioritize inventories for warehouse workers to count based
+            on a multitude of data points (e.g., cost of item, time since last
+            counted, stock quantity, turnover, etc.). The system provided
+            resources for easily allocating and deallocating locations for
+            inventories using the XMLRPC API for their highly customized and
+            legacy Odoo system. I also deeply improved the Arduino code they
+            used for led location indicators to help guide warehouse workers to
+            inventories they were looking for, reducing the code from $\approx$
+            450 lines to $\approx$ 50. In addition, I started a company wiki for
+            general documentation, a GitHub organization for Version Control,
+            and helped them improve their security and backup systems.
+        \\
+        \texttt{{\href{https://www.python.org/}{Python}}}\slashsep
+        \texttt{{\href{https://flask.palletsprojects.com/en/1.1.x/}{Flask}}}\slashsep
+        \texttt{{\href{https://www.sqlalchemy.org/}{SQLAlchemy}}}\slashsep
+        \texttt{{\href{https://www.postgresql.org/}{PostgreSQL}}}\slashsep
+        \texttt{{\href{https://jquery.com/}{jQuery}}}\slashsep
+        \texttt{{\href{https://reactjs.org/}{ReactJS}}}\slashsep
+        \texttt{{\href{https://www.odoo.com/}{Odoo}}}
+        }
+    \entry
         {2020 -- Current}
         {\href{https://euler-sci.com}{Euler Sciences LLC}}
         {Contract Developer}
@@ -91,7 +115,7 @@
         \texttt{{\href{https://www.gatsbyjs.org/}{GatsbyJS}}}
         }
     \entry
-        {2020 -- Current}
+        {2020 -- 2021}
         {Healthy Brands, LLC}
         {Contract Developer}
         {

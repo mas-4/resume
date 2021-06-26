@@ -98,10 +98,10 @@
 \usepackage{fontawesome} % Required for FontAwesome icons
 
 % Command to output an icon in a black square box with text to the right
-\newcommand{\icon}[3]{% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	\vcenteredhbox{\colorbox{white}{\makebox(#2, #2){\textcolor{Blue}{\large\csname fa#1\endcsname}}}}% Icon and box
+\newcommand{\icon}[2]{% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	\vcenteredhbox{\colorbox{white}{\makebox(15,15){\textcolor{Blue}{\large\csname fa#1\endcsname}}}}% Icon and box
 	\hspace{0.2cm}% Whitespace
-	\vcenteredhbox{\textcolor{Blue}{#3}}% Text
+	\vcenteredhbox{\textcolor{Blue}{\large#2}}% Text
 }
 
 %----------------------------------------------------------------------------------------
@@ -213,7 +213,7 @@
 		#1 % Leftmost entry date(s) text
 	}%
 	&\parbox[t]{0.825\textwidth}{% 82.5% of the text width of the page
-		\textbf{#2}% Entry heading text
+        \textcolor{Blue}{\textbf{#2}} % Entry heading text
 		\hfill% Horizontal whitespace
 		{\footnotesize \textbf{\textcolor{black}{#3}}}\\% Right-aligned entry qualifier text
 		#4 % Entry description text
