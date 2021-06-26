@@ -39,7 +39,7 @@
 
 \newcommand{\lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.} % Dummy text
 
-\pagestyle{empty} % No headers or footers
+%\pagestyle{empty} % Uncomment for no headers or footers
 
 \usepackage{moresize} % Provides more font size commands (\HUGE and \ssmall)
 \usepackage{enumitem}
@@ -54,8 +54,8 @@
 	paper=letterpaper, % Paper size, change to letterpaper for US letter size
 	top=1.2cm, % Top margin
 	bottom=1.2cm, % Bottom margin
-	left=1.5cm, % Left margin
-	right=1.5cm, % Right margin
+	left=2cm, % Left margin
+	right=2cm, % Right margin
 	headheight=0.75cm, % Header height
 	footskip=1cm, % Space from the bottom margin to the baseline of the footer
 	headsep=0.5cm, % Space from the top margin to the baseline of the header
@@ -217,7 +217,7 @@
 		#1 % Leftmost entry date(s) text
 	}%
 	&\parbox[t]{0.825\textwidth}{% 82.5% of the text width of the page
-        \textcolor{Blue}{\textbf{#2}} % Entry heading text
+        \textcolor{Blue}{\large\textbf{#2}} % Entry heading text
 		\hfill% Horizontal whitespace
 		{\footnotesize \textbf{\textcolor{black}{#3}}}\\% Right-aligned entry qualifier text
 		\large#4 % Entry description text
