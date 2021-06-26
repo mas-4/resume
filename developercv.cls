@@ -35,6 +35,7 @@
 \setlength{\parindent}{0mm} % Suppress paragraph indentation
 
 \usepackage[hidelinks]{hyperref} % Required for links but hide the default boxes around links
+\usepackage{xcolor}
 
 \newcommand{\lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.} % Dummy text
 
@@ -77,15 +78,30 @@
 
 \renewcommand*\familydefault{\sfdefault} % Force the sans-serif version of any font used
 
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
+
+\definecolor{Amber}{HTML}{FFBF00}
+\definecolor{Pink}{HTML}{E83F6F}
+\definecolor{Blue}{HTML}{2274A5}
+\definecolor{Emerald}{HTML}{32936F}
+\definecolor{White}{HTML}{FFFFFF}
+\definecolor{Charcoal}{HTML}{264653}
+\definecolor{Green}{HTML}{2A9D8F}
+\definecolor{Crayola}{HTML}{E9C46A}
+\definecolor{Brown}{HTML}{F4A261}
+\definecolor{Sienna}{HTML}{E76F51}
+
 %------------------------------------------------
 
 \usepackage{fontawesome} % Required for FontAwesome icons
 
 % Command to output an icon in a black square box with text to the right
 \newcommand{\icon}[3]{% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	\vcenteredhbox{\colorbox{black}{\makebox(#2, #2){\textcolor{white}{\large\csname fa#1\endcsname}}}}% Icon and box
+	\vcenteredhbox{\colorbox{white}{\makebox(#2, #2){\textcolor{Blue}{\large\csname fa#1\endcsname}}}}% Icon and box
 	\hspace{0.2cm}% Whitespace
-	\vcenteredhbox{\textcolor{black}{#3}}% Text
+	\vcenteredhbox{\textcolor{Blue}{#3}}% Text
 }
 
 %----------------------------------------------------------------------------------------
@@ -172,7 +188,7 @@
 % Command to output section title headings
 \newcommand{\cvsect}[1]{% The only parameter is the section text
 	\vspace{\baselineskip} % Whitespace before the section title
-	\colorbox{black}{\textcolor{white}{\MakeUppercase{\textbf{#1}}}}\\% Section title
+	\colorbox{Sienna}{\textcolor{white}{\MakeUppercase{\textbf{#1}}}}\\% Section title
 }
 
 %----------------------------------------------------------------------------------------
