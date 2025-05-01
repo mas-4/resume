@@ -190,9 +190,16 @@
 %----------------------------------------------------------------------------------------
 
 % Command to output section title headings
+% Command to output section title headings
 \newcommand{\cvsect}[1]{% The only parameter is the section text
     \vspace{\baselineskip} % Whitespace before the section title
-    \colorbox{Sienna}{\textcolor{white}{\MakeUppercase{\huge\textbf{#1}}}}\\% Section title
+    \colorbox{Sienna}{%
+        \textcolor{white}{%
+            \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+                {\huge\bfseries\MakeUppercase{#1}}%
+            }%
+        }%
+    }\\% Section title
 }
 
 %----------------------------------------------------------------------------------------
