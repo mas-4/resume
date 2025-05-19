@@ -32,7 +32,6 @@
     \href{https://linkedin.com/in/michael-sendker}{\icon{Linkedin}{michael-sendker}}\\
     \href{https://standingwater.io}{\icon{Globe}{standingwater.io}}\\
     \href{https://github.com/mas-4}{\icon{Github}{mas-4}}\\
-    \href{https://stackoverflow.com/story/mas4}{\icon{StackOverflow}{mas}}\\
 \end{minipage}
 
 % this vspace is largely useless and causes me to have trouble fitting everything
@@ -45,22 +44,22 @@
 \cvsect{Who I Am}
 
 \large
-I prefer Python, but I wear many hats. I have written code in,
-Python, vanilla JavaScript, ReactJS, and C\#. I have dabbled in C, Scheme, C++,
-Go, and Bash. I have built static sites in GatsbyJS, interfaces in WPF, and web
-scrapers and bots in Python. I even built an arduino-based PID controller for a
-popcorn popper to roast my own coffee. But by far most of my time has been spent
-developing a single web technology, consisting of $\approx$14 KLOC
-in Python, Flask, and SQLAlchemy, in the pursuit of my obsession with
-literature:
-{\href{https://github.com/malan88/icc}{\textcolor{Blue}{anno.wiki}}}.\\
+I like to call myself a Software Mechanic. My career is one of quick and efficient problem
+solving everything from technology issues to inefficient algorithms.
+I've streamlined build systems, built testing platforms, refactored hpc math code,
+experimented with shaders and CUDA, designed build and test pipelines, and maintained compute
+allocation platforms. I have built static sites in GatsbyJS, interfaces in WPF, and web scrapers
+in Python. I've written data readers in C and parsers in C++. I've worked on ml, web apps, and
+testing tools. I dabble in compiler studies. I once built an arduino-based PID controller
+for a popcorn popper to roast my own coffee. \\
 
-All of this should demonstrate that I am a full time learner. I have spent
-enough time learning new things that I have full confidence in my ability to
-learn new things. But most of all, I am a thoughtful programmer. I think
-twice about abstraction or hard coding, I think about tech debt and the way
-users will interact with a feature. When I'm writing code in the present,
-I'm thinking about the future.
+I am a Python expert, and proficient in JavaScript, C++, C\#, and C. I've dabbled in Rust, Scheme,
+and Bash. I once started working on a project written in a language I'd never dealt with (C\#),
+using an IDE I'd never opened (Visual Studio), and a paradigm I'd never tried my hand at
+(desktop applications), and was building new modules within a fortnight. I may not be able to
+write an efficient fast fourier transform, but I can probably figure out a technical solution
+for a given problem faster than the next guy. And while I'm not going to rewrite your trig,
+you can trust that I understand what a "hotpath" is and can find a way to speed it up. \\
 
 %----------------------------------------------------------------------------------------
 %   EXPERIENCE
@@ -70,7 +69,30 @@ I'm thinking about the future.
 
 \begin{entrylist}
     \entry
-        {2021 -- Current}
+        {2022 -- Current}
+        {\href{https://ontoinnovation.com/}{Onto Innovation}}
+        {Software Engineer}
+        {
+            \tech{{\href{https://www.python.org/}{Python}}}\slashsep
+            \tech{C++}\slashsep
+            \tech{C\#}\slashsep
+            \tech{C}\slashsep 
+            \tech{{\href{https://docs.pytest.org/}{pytest}}}\slashsep
+            \tech{{\href{https://scikit-learn.org/stable/}{scikit-learn}}}\slashsep
+            \tech{{\href{https://pandas.pydata.org/}{pandas}}}\slashsep
+            \tech{{\href{https://azure.microsoft.com/en-us/products/devops}{Azure DevOps}}}\\
+            \begin{itemize}[leftmargin=*, noitemsep]
+            \item Worked on automated testing for various applications
+            \item Managed and upgraded the build configurations for various applications
+            \item Built visualization tools for testing results
+            \item Developed and maintained support applications in a variety of languages
+            \item Developed, maintained, and improved devops infrastructure
+            \item Lead a major compiler upgrade project for a critical application
+            \item Maintained and improved a C\# compute allocation platform
+            \end{itemize}
+        }
+    \entry
+        {2021 -- 2022}
         {\href{https://mbs-standoffs.com}{HtmMbs LLC}}
         {Software Developer}
         {
@@ -81,22 +103,13 @@ I'm thinking about the future.
             \tech{{\href{https://jquery.com/}{jQuery}}}\slashsep
             \tech{{\href{https://reactjs.org/}{ReactJS}}}\slashsep
             \tech{{\href{https://www.odoo.com/}{Odoo}}}\\
-            I built a sophisticated perpetual inventory system for the company
-            to prioritize inventory checks by warehouse workers. Priority was
-            calculated from around six different datapoints (e.g., cost of item,
-            time since last counted, stock quantity, turnover, etc.) with a
-            simple multinomial. The system provided resources for easily
-            allocating and deallocating locations for inventories using the
-            XMLRPC API for their highly customized and legacy Odoo system.\\
-
-            I also deeply improved the Arduino code they used for led location
-            indicators to help guide warehouse workers to inventories they were
-            looking for, reducing the code from $\approx$450 lines to
-            $\approx$50.\\
-
-            In addition, I started a company wiki for general documentation, a
-            GitHub organization for version control, a 1Password repository for
+            \begin{itemize}[leftmargin=*, noitemsep]
+            \item Built a sophisticated perpetual inventory system.
+            \item Created a tool for (de)allocating inventory locations for their customized legacy Odoo.
+            \item Improved the Arduino code they used for LED location indicators, reducing the code from $\approx$450 lines to $\approx$50.
+            \item Started a company wiki for general documentation, a GitHub organization for version control, a 1Password repository for
             security and helped them improve their backup systems.
+            \end{itemize}
         }
     \entry
         {2020 -- 2021}
@@ -109,13 +122,23 @@ I'm thinking about the future.
             \tech{{\href{https://www.sqlalchemy.org/}{SQLAlchemy}}}\slashsep
             \tech{{\href{https://www.postgresql.org/}{PostgreSQL}}}\slashsep
             \tech{{\href{https://archlinux.org/}{Arch Linux}}}\\
-            I worked on several projects for this company.
             \begin{itemize}[leftmargin=*, noitemsep]
-                \item I built and deployed a multithreaded scraper and alert system for notifying the company of BuyBox loss events on Amazon using a variety of data sources
-                \item I launched, developed, and maintained {\href{https://ask.fiteyes.com}{ask.fiteyes.com}}, a Django-based question and answer forum built upon {\href{https://github.com/ialbert/biostar-central}{Biostar}}.  Contributed several bug fixes back upstream.
-                \item I prepared and maintained several VPS servers, including one in Arch Linux
-                \item I did general systems programming, including Systemd Units and Timers for varied infrastructure
+                \item Built a multithreaded scraper and alert system for tracking Amazon BuyBox loss events
+                \item Built {\href{https://ask.fiteyes.com}{ask.fiteyes.com}}, a Django-based question and answer forum built upon {\href{https://github.com/ialbert/biostar-central}{Biostar}}. Contributed several bug fixes back upstream.
+                \item Prepared and maintained several VPS servers.
+                \item Did general systems programming, including Systemd Units and Timers for varied infrastructure
             \end{itemize}
+        }
+
+    \entry
+        {2020 -- 2021}
+        {\href{https://euler-sci.com}{Laser System Interface}}
+        {Contract}
+        {
+            \tech{{\href{https://en.wikipedia.org/wiki/C_Sharp_(programming_language)}{C\#}}}\slashsep
+            \tech{{\href{https://en.wikipedia.org/wiki/Windows_Presentation_Foundation}{Windows Presentation Foundation}}}\slashsep
+            \tech{{\href{https://www.sqlite.org/index.html}{SQLite}}}\\
+            Worked on a gui interface for a skin condition treatment laser system.
         }
     \entry
         {2020}
@@ -126,79 +149,6 @@ I'm thinking about the future.
             \tech{{\href{https://www.gatsbyjs.org/}{GatsbyJS}}}\slashsep
             \tech{{\href{https://reactjs.org/}{ReactJS}}}\slashsep
             \tech{{\href{https://graphql.org/}{GraphQL}}}\\
-            This was a very short contract on a hand shake agreement to design a
-            contractor collective's main website. The company specializes in
-            scientific and mathematical programming with occasional forays into
-            more conventional programming paradigms.\\
-
-            To play up the company's specialization in mathematics, I used a
-            feature image of Leonhard Euler and his namesake identity,
-            $e^{i\pi}+1=0$, as a motif.
-        }
-    \entry
-        {2020 -- 2021}
-        {\href{https://euler-sci.com}{Laser System Interface}}
-        {Contract}
-        {
-            \tech{{\href{https://en.wikipedia.org/wiki/C_Sharp_(programming_language)}{C\#}}}\slashsep
-            \tech{{\href{https://en.wikipedia.org/wiki/Windows_Presentation_Foundation}{Windows Presentation Foundation}}}\slashsep
-            \tech{{\href{https://www.sqlite.org/index.html}{SQLite}}}\\
-            Designing Euler's website demonstrated to them that I am a very
-            capable interface developer, so they contracted me to help complete
-            a tablet user interface for a contract they'd taken on for a laser
-            system meant to treat skin conditions. It was a bit of a head first
-            moment for me, as it was in a language I'd never written, C\#, a
-            framework I'd never heard of, WPF, a programming domain I'd never
-            worked in, tablet GUIs, and required the use of an IDE I'd never
-            opened, Visual Studio. Within a matter of weeks I was writing View
-            Models that have since gone into production around the world. I also
-            helped design the database.
-        }
-    \entry
-        {2019 -- Current}
-        {{\href{https://github.com/Anno-Wiki}{Intertextual Canon Cloud 2}}}
-        {Flask/React App}
-        {
-            \tech{{\href{https://www.python.org/}{Python}}}\slashsep
-            \tech{{\href{https://flask.palletsprojects.com/en/1.1.x/}{Flask}}}\slashsep
-            \tech{{\href{https://www.sqlalchemy.org/}{SQLAlchemy}}}\slashsep
-            \tech{{\href{https://www.elastic.co/}{Elasticsearch}}}\slashsep
-            \tech{{\href{https://www.postgresql.org/}{PostgreSQL}}}\slashsep
-            \tech{{\href{https://www.docker.com/}{Docker}}}\slashsep
-            \tech{{\href{https://reactjs.org/}{ReactJS}}}\\
-            This is the second iteration of the ICC (see below), with improved
-            data architecture and a single-page application frontend based in
-            React. Using Elasticsearch to store texts and PostgreSQL to store
-            annotations and general application data allows for faster
-            incremental searching. I also wrote more sophisticated text
-            processors for breaking text into 100k byte chunks and annotating
-            stylistic elements, while stripping all styling from the raw text.\\
-        }
-    \entry
-        {2017 -- 2019}
-        {{\href{https://github.com/Anno-Wiki/icc}{Intertextual Canon Cloud (anno.wiki)}}}
-        {Flask App}
-        {
-            \tech{{\href{https://www.python.org/}{Python}}}\slashsep
-            \tech{{\href{https://flask.palletsprojects.com/en/1.1.x/}{Flask}}}\slashsep
-            \tech{{\href{https://www.sqlalchemy.org/}{SQLAlchemy}}}\slashsep
-            \tech{{\href{https://mariadb.org/}{MariaDB}}}\slashsep
-            \tech{{\href{https://www.elastic.co/}{Elasticsearch}}}\slashsep
-            \tech{{\href{https://docs.pytest.org/en/stable/}{pytest}}}\slashsep
-            \tech{{\href{https://www.heroku.com/}{Heroku}}}\\
-            The ICC is a web application designed to allow for collaboratively
-            building an exhaustive and definitive repository of annotated
-            literature. I designed, developed, deployed, and continue to
-            maintain the project solo, managing occasionally to rope in some
-            programmer friends for help with various features. It consists of
-            $\approx$14 KLOC and $\approx$800k lines of code churn (according
-            to GitHub). The backend uses Flask/SQLAlchemy. The frontend uses
-            Jinja2, Sass, and VanillaJS. I also had to write several ETL data
-            pipelines for processing {\href{https://gutenberg.org}{Project
-            Gutenberg}} texts.  It is deployed via Heroku. I learned the entire
-            web application life cycle on this project, and it continues to
-            teach me. It is currently maintained at
-            {\href{https://anno.wiki}{https://anno.wiki}}.
         }
     \entry
         {2017 -- 2020}
@@ -212,15 +162,11 @@ I'm thinking about the future.
             \tech{{\href{https://www.joomla.org/}{Joomla}}}\slashsep
             \tech{{\href{https://quickbooks.intuit.com/}{Quickbooks}}}\slashsep
             \tech{{\href{https://www.microsoft.com/en-us/microsoft-365/excel}{Excel}}}\\
-            I did not anticipate a technology career, so my start was as an
-            Office Manager working with Quickbooks and general company
-            management. Soon after I began working on ICC I developed a love for
-            technology and it began to permeate the company. I designed their
-            current website based on a Joomla template, then I redesigned it
-            using GatsbyJS. I also cleaned up a lot of the company's books using
-            Python and macros, and helped build a maintainable static site
-            for a yearly golf tournament the company uses for networking and
-            marketing.
+            \begin{itemize}[leftmargin=*, noitemsep]
+            \item Built the company website (twice)
+            \item Analyzed county parcel data for Facebook marketing campaigns
+            \item Automated bookkeeping, and did general office management.
+            \end{itemize}
         }
 \end{entrylist}
 
@@ -256,7 +202,8 @@ I'm thinking about the future.
 
     \textbf{English} --- native\\
     \textbf{French} --- fluent\\
-    \textbf{Spanish} --- rudimentary
+    \textbf{Spanish} --- rudimentary\\
+    \textbf{Latin} --- for fun
 
 \end{minipage}
 \hfill
@@ -264,11 +211,10 @@ I'm thinking about the future.
     \vspace{-\baselineskip} % Required for vertically aligning minipages
 
     \cvsect{Free Time}
-
-    I am a lifelong learner, constantly finding new things to obsess over. In
-    the last three years I've learned the intricacies of wine and cheese,
-    learned to roast coffee and brew top-tier espresso, become a sophisticated
-    mixologist, and learned to speak French.
+    I run daily, cycle often, and work out regularly. I enjoy poetry, classics, and
+    have a weakness for politics. I program for fun sometimes, and I've rewritten
+    my personal static site generator in Python, C++, and am working on C. I also
+    have a strange fascination with compilers.
 \end{minipage}
 %\hfill
 %\begin{minipage}[t]{0.35\textwidth}
