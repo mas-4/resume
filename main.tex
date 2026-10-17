@@ -93,7 +93,7 @@ world's largest chipmakers. Self-taught, with a background in philosophy and cla
             \item Follows how the news is told across 145 outlets: front pages, wire copy, TV chyrons, radio and podcasts (transcribed locally), claims on social media, and fact-checks, clustered into stories and multi-part sagas.
             \item Building a bottom-up index of the recurring motifs in political storytelling, read against folklore scholarship (Thompson's motif index and others). Local models propose filings; a confidence model trained on my decisions scores them.
             \item Every model runs locally on one 10 GB GPU, chosen by testing candidates against my own judgments, not public benchmarks; a methods log dates every change in measurement.
-            \item Built the 2024 version (Maudlin News) by hand: multithreaded scrapers, sentiment analysis, and story clustering with a 10x faster C extension. Restarted in October 2026 with AI assistance.
+            \item Built the 2024 version (Maudlin News) by hand, including multithreaded scrapers and my own story clustering (after trying HDBSCAN and k-means): TF-IDF cosine similarity thresholded into a graph whose connected components are stories, searched by a C extension for a 10x speedup. Restarted in October 2026 with AI assistance.
             \end{itemize}
         }
 \end{entrylist}
