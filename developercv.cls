@@ -52,13 +52,13 @@
 
 \geometry{
     paper=letterpaper, % Paper size, change to letterpaper for US letter size
-    top=1.2cm, % Top margin
-    bottom=1.2cm, % Bottom margin
-    left=2cm, % Left margin
-    right=2cm, % Right margin
-    headheight=0.75cm, % Header height
-    footskip=1cm, % Space from the bottom margin to the baseline of the footer
-    headsep=0.5cm, % Space from the top margin to the baseline of the header
+    top=1cm, % Top margin
+    bottom=1cm, % Bottom margin
+    left=1.6cm, % Left margin
+    right=1.6cm, % Right margin
+    headheight=0cm, % No header
+    footskip=0cm, % No footer (no page numbers on a one-page resume)
+    headsep=0cm, % No header
     %showframe, % Uncomment to show how the type block is set on the page
 }
 
@@ -192,11 +192,11 @@
 % Command to output section title headings
 % Command to output section title headings
 \newcommand{\cvsect}[1]{% The only parameter is the section text
-    \vspace{\baselineskip} % Whitespace before the section title
+    \vspace{0.6\baselineskip} % Whitespace before the section title
     \colorbox{Sienna}{%
         \textcolor{white}{%
             \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
-                {\huge\bfseries\MakeUppercase{#1}}%
+                {\Large\bfseries\MakeUppercase{#1}}%
             }%
         }%
     }\\% Section title
@@ -212,26 +212,29 @@
 
 \setlength{\tabcolsep}{0pt} % No spacing between table columns
 
-% Environment to hold a new list of entries
-\newenvironment{entrylist}{
-    \begin{longtable}[H]{l l}
-        }{
-    \end{longtable}
+% Entries run the full width of the page. The dates sit at the right of
+% the heading line, after the role, instead of in a column of their own.
+\newenvironment{entrylist}{\par}{}
+
+\newcommand{\entry}[4]{% #1 dates, #2 heading, #3 role, #4 description
+    \noindent\textcolor{Blue}{\large\textbf{#2}}%
+    \hfill{\footnotesize\textbf{#3}\enspace$\cdot$\enspace#1}\par
+    {\bodyfont#4\par}%
+    \vspace{5pt}%
 }
 
-\newcommand{\entry}[4]{% First argument for the leftmost date(s) text, second is for the bold entry heading, third is for the bold right-aligned entry qualifier and the fourth is for the entry description
-    \parbox[t]{0.175\textwidth}{% 17.5% of the text width of the page
-        #1 % Leftmost entry date(s) text
-    }%
-    &\parbox[t]{0.825\textwidth}{% 82.5% of the text width of the page
-        \textcolor{Blue}{\large\textbf{#2}} % Entry heading text
-        \hfill% Horizontal whitespace
-        {\footnotesize \textbf{\textcolor{black}{#3}}}\\% Right-aligned entry qualifier text
-        \large#4 % Entry description text
-}\\\\}
-\newcommand{\tech}[1] {
-    \textcolor{Blue}{\large\texttt{#1}}
+% One line per job: "Company, role: what I did", dates on the right
+\newcommand{\shortentry}[4]{% #1 dates, #2 company, #3 role, #4 description
+    \noindent{\bodyfont\textcolor{Blue}{\textbf{#2}}, #3: #4\hfill\mbox{\footnotesize#1}\par}%
+    \vspace{2pt}%
 }
+
+\newcommand{\tech}[1] {
+    \textcolor{Blue}{\bodyfont\texttt{#1}}
+}
+
+% Body text: 9.6pt on 11.8pt leading, so a full resume fits on one page
+\newcommand{\bodyfont}{\fontsize{9.6}{11.8}\selectfont}
 
 % Command to output a separator slash between lists, e.g. '  /  '
 \newcommand{\slashsep}{\hspace{1mm}—\hspace{1mm}}

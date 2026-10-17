@@ -1,8 +1,6 @@
 \documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
 \begin{document}
-
-%----------------------------------------------------------------------------------------
-
+\pagestyle{empty} % One page: no page number
 
 %----------------------------------------------------------------------------------------
 %   TITLE AND CONTACT INFORMATION
@@ -15,14 +13,10 @@
 
     \vspace{6pt}
 
-    {\huge Software Developer} % Career or current job title
+    {\huge Build \& Test Engineer} % Career or current job title
 \end{minipage}
 \begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
     \vspace{-\baselineskip} % Required for vertically aligning minipages
-    % The first parameter is the FontAwesome icon name and the second is the
-    % text Other icons can be found by referring to fontawesome5.pdf (supplied
-    % with the template) and using the word after \fa in the command for the
-    % icon you want
     \href{mailto:m@standingwater.io}{\icon{Envelope}{m@standingwater.io}}\\
     \icon{MapMarker}{Tarpon Springs, FL}\\
     \href{tel:+1727-272-3915}{\icon{Phone}{+1 (727) 272-3915}}\\
@@ -35,19 +29,17 @@
 \end{minipage}
 
 %----------------------------------------------------------------------------------------
-%   INTRODUCTION, SKILLS AND TECHNOLOGIES
+%   INTRODUCTION
 %----------------------------------------------------------------------------------------
 
 \cvsect{Who I Am}
 
-\large
-Software engineer specializing in rapid problem-solving across the full technology stack. 
-I architect testing frameworks, optimize build systems, and tackle complex integration challenges from 
-high-performance computing to machine learning pipelines. My experience spans streamlining 2M+ line 
-codebases, building CI/CD infrastructure, and developing tools that become standard across engineering teams. 
-Currently deepening computer science fundamentals through self-directed study in algorithms, compilers, 
-and numerical methods to complement extensive practical experience. Whether debugging legacy systems or 
-implementing modern DevOps workflows, I find efficient solutions to technical problems. \\
+\bodyfont
+Build and test engineer for semiconductor metrology software, and the person engineering
+teams come to for pipelines, build machines, test infrastructure, and the problems that
+don't belong to anyone else. I build the tools that tell a 2M+ line C++ codebase when its
+results change and why, and I've put them in front of field engineers at some of the
+world's largest chipmakers. Self-taught, with a background in philosophy and classics.
 
 %----------------------------------------------------------------------------------------
 %   EXPERIENCE
@@ -57,157 +49,77 @@ implementing modern DevOps workflows, I find efficient solutions to technical pr
 
 \begin{entrylist}
     \entry
-        {2022 -- Current}
-        {\href{https://ontoinnovation.com/}{Onto Innovation}}
-        {Software Engineer}
+        {2021 -- Current}
+        {\href{https://ontoinnovation.com/}{Onto Innovation}, Metrology Business Unit}
+        {Build \& Test Engineer (Contract)}
         {
             \tech{{\href{https://www.python.org/}{Python}}}\slashsep
             \tech{C++}\slashsep
             \tech{C\#}\slashsep
-            \tech{C}\slashsep 
+            \tech{C}\slashsep
             \tech{{\href{https://docs.pytest.org/}{pytest}}}\slashsep
-            \tech{{\href{https://scikit-learn.org/stable/}{scikit-learn}}}\slashsep
-            \tech{{\href{https://pandas.pydata.org/}{pandas}}}\slashsep
-            \tech{{\href{https://azure.microsoft.com/en-us/products/devops}{Azure DevOps}}}\\
-            \begin{itemize}[leftmargin=*, noitemsep]
-            \item Led critical compiler upgrade for 2M+ line optical measurement software (NanoDiffract), ensuring compatibility and performance across legacy codebase
-            \item Architected and developed nanopytest, a Python-based testing framework using pytest and SQLAlchemy that replaced legacy C\# tooling and became the standardized testing solution across the engineering team
-            \item Implemented comprehensive CI/CD infrastructure including PR validation, build machines, and automated testing pipelines for multiple product lines
-            \item Built real-time visualization tools for test result history and neural network training data, enabling R\&D teams to analyze CI performance and model convergence
-            \item Developed cross-platform testing capabilities extending automated testing framework to cover both traditional software (NanoDiffract) and ML products (SpectraProbe, AutoML)
-            \item Designed distributed system for managing 2GB+ recipe datasets with automated server deployment and distribution
-            \item Maintained enterprise build systems including Visual Studio solutions and installer frameworks for multiple product deployments
+            \tech{{\href{https://www.postgresql.org/}{PostgreSQL}}}\slashsep
+            \tech{Qt}\slashsep
+            \tech{{\href{https://azure.microsoft.com/en-us/products/devops}{Azure DevOps}}}\slashsep
+            \tech{RHEL}
+            \begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+            \item Designed and built, over five years, the standard regression-testing system for NanoDiffract, Onto's 2M+ line C++ optical metrology software: a pytest-based tool that generates per-build reference results, stores them in PostgreSQL, and runs PR validation and post-merge regressions on the cluster. Moved its database and recipe packages to RHEL.
+            \item Built a desktop GUI for it (Qt/PySide6, Cythonized, packaged with PyInstaller and WiX), deployed at several of the world's largest semiconductor manufacturers.
+            \item Built debugging and performance tooling on top of it: automated bisection across official builds that pinpoints the build behind a result change in minutes, a benchmark harness with statistical significance testing, and a memory monitor: a small HTTP server in C on each blade that the head node polls for NanoDiffract's memory use.
+            \item Automated recovery of wedged and lost nodes in the cluster management system for application developers, and upgraded its agent to .NET 8. Traced erratic behavior on 80 nodes to a faulty port on the server rack.
+            \item Own the build infrastructure: provision and maintain the build machines, write the teams' Azure DevOps pipelines, and led compiler and dependency upgrades (including Intel MKL) and a build-system redesign. Cleared $\sim$7,000 compiler warnings across NanoDiffract by hand.
+            \item Rewrote NanoDiffract's neural net inference as a Python C extension so ML engineers could analyze RCWA results.
+            \item Helped build the AutoML product's test suite, adding speed-ups, automated PDF reports, and faster file reading.
+            \item Now: moving the results database to a leaner schema, adding node memory data to a redesigned result-history app, and redesigning test recipe packaging.
             \end{itemize}
         }
+\end{entrylist}
+
+\cvsect{Projects}
+
+\begin{entrylist}
     \entry
-        {2024}
-        {\href{https://github.com/mas-4/maudlin2}{Maudlin News}}
+        {2024 -- Current}
+        {\href{https://bignews.day}{bignews.day}}
         {Personal Project}
         {
             \tech{{\href{https://www.python.org/}{Python}}}\slashsep
-            \tech{CPython}\slashsep
-            \tech{{\href{https://www.nltk.org/}{nltk}}}\slashsep
-            \tech{{\href{https://pandas.pydata.org/}{pandas}}}\slashsep
-            \tech{{\href{https://matplotlib.org/stable/}{matplotlib}}}\slashsep
-            \tech{{\href{https://numpy.org/}{NumPy}}}\\
-
-            Architected end-to-end news analysis system with 100+ custom web scrapers optimized for performance across diverse site architectures. Implemented sentiment analysis pipeline and custom topic clustering algorithm using agglomerative clustering with cosine similarity metrics. Translated core algorithms to CPython for 10x performance improvements in data processing throughput. Generated a static site for topical election polling analysis.
-        }
-    \entry
-        {2021 -- 2022}
-        {\href{https://mbs-standoffs.com}{HtmMbs LLC}}
-        {Software Developer}
-        {
-            \tech{{\href{https://www.python.org/}{Python}}}\slashsep
-            \tech{{\href{https://flask.palletsprojects.com/en/1.1.x/}{Flask}}}\slashsep
+            \tech{C}\slashsep
             \tech{{\href{https://www.sqlalchemy.org/}{SQLAlchemy}}}\slashsep
-            \tech{{\href{https://www.postgresql.org/}{PostgreSQL}}}\slashsep
-            \tech{{\href{https://jquery.com/}{jQuery}}}\slashsep
-            \tech{{\href{https://reactjs.org/}{ReactJS}}}\slashsep
-            \tech{{\href{https://www.odoo.com/}{Odoo}}}\\
-            \begin{itemize}[leftmargin=*, noitemsep]
-            \item Built a sophisticated perpetual inventory system with real-time tracking capabilities
-            \item Created allocation management tool for customized legacy Odoo ERP system, streamlining warehouse operations
-            \item Optimized Arduino LED indicator code, reducing codebase by 89\% while maintaining functionality
-            \item Established development infrastructure including company wiki, GitHub organization, 1Password security system, and improved backup protocols
+            \tech{{\href{https://ollama.com/}{Ollama}}}\slashsep
+            \tech{Whisper}\slashsep
+            \tech{{\href{https://scikit-learn.org/stable/}{scikit-learn}}}
+            \begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+            \item Follows how the news is told across 145 outlets: front pages, wire copy, TV chyrons, radio and podcasts (transcribed locally), and fact-checks, clustered into stories and multi-part sagas.
+            \item Building a bottom-up index of the recurring motifs in political storytelling, read against folklore scholarship (Thompson's motif index and others). Local models propose filings; a confidence model trained on my decisions scores them.
+            \item Every model runs locally on one 10 GB GPU, chosen by testing candidates against my own judgments, not public benchmarks; a methods log dates every change in measurement.
+            \item Built the 2024 version (Maudlin News) by hand: multithreaded scrapers, sentiment analysis, and story clustering with a 10x faster C extension. Restarted in October 2026 with AI assistance.
             \end{itemize}
         }
-    \entry
-        {2020 -- 2021}
-        {Healthy Brands, LLC}
-        {Contract Developer}
-        {
-            \tech{{\href{https://www.python.org/}{Python}}}\slashsep
-            \tech{{\href{https://www.crummy.com/software/BeautifulSoup/bs4/doc/}{BeautifulSoup4}}}\slashsep
-            \tech{{\href{https://www.djangoproject.com/}{Django}}}\slashsep
-            \tech{{\href{https://www.sqlalchemy.org/}{SQLAlchemy}}}\slashsep
-            \tech{{\href{https://www.postgresql.org/}{PostgreSQL}}}\slashsep
-            \tech{{\href{https://archlinux.org/}{Arch Linux}}}\\
-            \begin{itemize}[leftmargin=*, noitemsep]
-                \item Developed multithreaded Amazon BuyBox monitoring system with real-time alert capabilities for e-commerce operations
-                \item Built and deployed {\href{https://ask.fiteyes.com}{ask.fiteyes.com}}, a Django-based Q\&A platform extending {\href{https://github.com/ialbert/biostar-central}{Biostar}} with custom features and upstream contributions
-                \item Configured and maintained multiple VPS deployments with custom systemd services and automation
-                \item Implemented systems programming solutions including Systemd Units and Timers for infrastructure automation
-            \end{itemize}
-        }
+\end{entrylist}
 
-    \entry
-        {2020 -- 2021}
-        {\href{https://euler-sci.com}{Laser System Interface}}
-        {Contract}
-        {
-            \tech{{\href{https://en.wikipedia.org/wiki/C_Sharp_(programming_language)}{C\#}}}\slashsep
-            \tech{{\href{https://en.wikipedia.org/wiki/Windows_Presentation_Foundation}{Windows Presentation Foundation}}}\slashsep
-            \tech{{\href{https://www.sqlite.org/index.html}{SQLite}}}\\
-            Developed GUI interface for medical laser system used in dermatological treatments.
-        }
+\cvsect{Earlier Experience}
 
-    \entry
-        {2017 -- 2020}
-        {{\href{https://glendalepainting.com/}{Glendale Painting Corporation}}}
-        {Office Manager, Technology Director}
-        {
-            \tech{{\href{https://www.python.org/}{Python}}}\slashsep
-            \tech{{\href{https://www.gatsbyjs.org/}{GatsbyJS}}}\slashsep
-            \tech{{\href{https://reactjs.org/}{ReactJS}}}\slashsep
-            \tech{{\href{https://graphql.org/}{GraphQL}}}\slashsep
-            \tech{{\href{https://www.joomla.org/}{Joomla}}}\slashsep
-            \tech{{\href{https://quickbooks.intuit.com/}{Quickbooks}}}\slashsep
-            \tech{{\href{https://www.microsoft.com/en-us/microsoft-365/excel}{Excel}}}\\
-            \begin{itemize}[leftmargin=*, noitemsep]
-            \item Designed and built company website with modern frameworks, improving online presence and lead generation
-            \item Developed data analysis tools for county parcel data to optimize Facebook marketing campaigns and target demographics
-            \item Automated bookkeeping processes and managed general office operations
-            \end{itemize}
-        }
+\begin{entrylist}
+    \shortentry{2021}{\href{https://mbs-standoffs.com}{HtmMbs LLC}}{Software Developer}{perpetual inventory and allocation tools for an Odoo ERP.}
+    \shortentry{2021}{Healthy Brands, LLC}{Contract Developer}{an Amazon BuyBox monitor and \href{https://ask.fiteyes.com}{ask.fiteyes.com}.}
+    \shortentry{2020 -- 2021}{\href{https://euler-sci.com}{Euler Scientific}}{Contract}{the GUI for a dermatology laser system (C\#, WPF).}
+    \shortentry{2017 -- 2020}{\href{https://glendalepainting.com/}{Glendale Painting}}{Office Manager \& Technology Director}{website, marketing data tools.}
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
 %   EDUCATION
 %----------------------------------------------------------------------------------------
 
-\cvsect{Education}
+\cvsect{Education \& Languages}
 
 \begin{entrylist}
-    \entry
-    {2008 -- 2010}
-    {Philosophy and Classics}
-    {Florida State University}
-    {Focused on Ancient Philosophy, Aristotle, Philosophy of Mind, and Symbolic Logic. 
-    Also studied Ancient Greek and Latin. President of Philosophy Club (2010)}
-    \entry
-    {2007 -- 2008}
-    {Philosophy}
-    {University of South Florida}
-    {General introductory classes, Social Philosophy, Critical Thinking}
+    \shortentry{2007 -- 2010}{Florida State University}{Philosophy and Classics}{Greek and Latin; Philosophy Club president.}
 \end{entrylist}
 
-%----------------------------------------------------------------------------------------
-%   ADDITIONAL INFORMATION
-%----------------------------------------------------------------------------------------
-
-\begin{minipage}[t]{0.3\textwidth}
-    \vspace{-\baselineskip} % Required for vertically aligning minipages
-
-    \cvsect{Languages}
-
-    \textbf{English} --- native\\
-    \textbf{French} --- fluent\\
-    \textbf{Spanish} --- rudimentary\\
-    \textbf{Latin} --- for fun
-
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.7\textwidth}
-    \vspace{-\baselineskip} % Required for vertically aligning minipages
-
-    \cvsect{Free Time}
-    
-    Daily runner and cyclist with a passion for poetry, classics, and political discourse. 
-    Currently pursuing self-directed computer science study including algorithms, compilers, 
-    and numerical methods. Enjoy building personal projects including static site generators 
-    implemented across multiple languages (Python, C++, C) and exploring compiler design.
-\end{minipage}
+{\bodyfont
+\textbf{Languages:} English (native), French (fluent), Spanish (rudimentary), Latin (for fun).\\
+\textbf{Free time:} Daily runner and cyclist; reading epic poetry, learning Latin, and studying compilers.\par}
 
 %----------------------------------------------------------------------------------------
 
