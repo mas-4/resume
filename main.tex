@@ -35,11 +35,11 @@
 \cvsect{Who I Am}
 
 \bodyfont
-Build and test engineer for semiconductor metrology software, and the person engineering
-teams come to for pipelines, build machines, test infrastructure, and the problems that
-don't belong to anyone else. I build the tools that tell a 2M+ line C++ codebase when its
-results change and why, and I've put them in front of field engineers at some of the
-world's largest chipmakers. Self-taught, with a background in philosophy and classics.
+Platform, build and test engineer: I find the pain points in how a company builds and tests its
+software and engineer them away, especially in old code. For five years I've done
+that for NanoDiffract, a decades-old, 2M+ line C++ metrology package in a Windows shop, and I'm the
+person its teams come to for pipelines, build machines, test infrastructure, and the problems that
+don't belong to anyone else. Self-taught, with a background in philosophy and classics; I also led the company's developer book club.
 
 %----------------------------------------------------------------------------------------
 %   EXPERIENCE
@@ -63,14 +63,14 @@ world's largest chipmakers. Self-taught, with a background in philosophy and cla
             \tech{{\href{https://azure.microsoft.com/en-us/products/devops}{Azure DevOps}}}\slashsep
             \tech{RHEL}
             \begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
-            \item Designed and built, over five years, the standard regression-testing system for NanoDiffract, Onto's 2M+ line C++ optical metrology software: a pytest-based tool that generates per-build reference results, stores them in PostgreSQL, and runs PR validation and post-merge regressions on the cluster. Moved its database and recipe packages to RHEL.
-            \item Built a desktop GUI for it (Qt/PySide6, Cythonized, packaged with PyInstaller and WiX), deployed at several of the world's largest semiconductor manufacturers.
-            \item Built debugging and performance tooling on top of it: automated bisection across official builds that pinpoints the build behind a result change in minutes, a benchmark harness with statistical significance testing, and a memory monitor: a small HTTP server in C on each blade that the head node polls for NanoDiffract's memory use.
+            \item Designed and built, \textbf{over five years}, the regression-testing system \textbf{every NanoDiffract engineer (\textasciitilde 30) relies on}: a pytest-based tool that generates per-build reference results, stores them in PostgreSQL, and runs PR validation and post-merge regressions on the cluster. Moved its database and recipe packages to RHEL.
+            \item Built its desktop GUI (PySide6, Cython), in use at \textbf{five leading chipmakers} and rolling out to every Onto customer.
+            \item Built tooling on top of it: automated bisection across official builds that finds the build behind a result change \textbf{in minutes} (once a manual, build-by-build hunt), a benchmark harness with statistical significance testing, and a memory monitor: a small HTTP server in C on each blade that the head node polls for memory use.
             \item Automated recovery of wedged and lost nodes in the cluster management system for application developers, and upgraded its agent to .NET 8. Traced erratic behavior on 80 nodes to a faulty port on the server rack.
-            \item Own the build infrastructure: provision and maintain the build machines, write the teams' Azure DevOps pipelines, and led compiler and dependency upgrades (including Intel MKL) and a build-system redesign. Cleared $\sim$7,000 compiler warnings across NanoDiffract by hand.
-            \item Rewrote NanoDiffract's neural net inference as a Python C extension so ML engineers could analyze RCWA results.
+            \item Own the build infrastructure: provision and maintain the build machines, write the teams' Azure DevOps pipelines, and led compiler and dependency upgrades (including Intel MKL) and a build-system redesign. Cleared \textbf{$\sim$7,000 compiler warnings} across NanoDiffract by hand.
+            \item Rewrote NanoDiffract's neural net inference as a \textbf{Python C extension} so ML engineers could analyze RCWA results.
             \item Helped build the AutoML product's test suite, adding speed-ups, automated PDF reports, and faster file reading.
-            \item Now: moving the results database to a leaner schema, adding node memory data to a redesigned result-history app, and redesigning test recipe packaging.
+            \item Now: a leaner results schema, node memory data in a redesigned history app, and new test recipe packaging.
             \end{itemize}
         }
 \end{entrylist}
@@ -91,9 +91,9 @@ world's largest chipmakers. Self-taught, with a background in philosophy and cla
             \tech{{\href{https://scikit-learn.org/stable/}{scikit-learn}}}
             \begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
             \item Follows how the news is told across 145 outlets: front pages, wire copy, TV chyrons, radio and podcasts (transcribed locally), claims on social media, and fact-checks, clustered into stories and multi-part sagas.
-            \item Building a bottom-up index of the recurring motifs in political storytelling, read against folklore scholarship (Thompson's motif index and others). Local models propose filings; a confidence model trained on my decisions scores them.
+            \item Classifies the recurring narratives in political claims, in an index built bottom-up and grounded in folklore scholarship; local models propose classifications and a model trained on my own decisions scores them.
             \item Every model runs locally on one 10 GB GPU, chosen by testing candidates against my own judgments, not public benchmarks; a methods log dates every change in measurement.
-            \item Built the 2024 version (Maudlin News) by hand, including multithreaded scrapers and my own story clustering (after trying HDBSCAN and k-means): TF-IDF cosine similarity thresholded into a graph whose connected components are stories, searched by a C extension for a 10x speedup. Restarted in October 2026 with AI assistance.
+            \item Built the 2024 version (Maudlin News) by hand, including multithreaded scrapers and \textbf{my own story clustering algorithm} (after trying HDBSCAN and k-means): TF-IDF cosine similarity thresholded into a graph whose connected components are stories, searched by a C extension for a 10x speedup. Restarted in October 2026 with AI assistance.
             \end{itemize}
         }
 \end{entrylist}
