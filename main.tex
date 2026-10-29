@@ -37,7 +37,7 @@
 \bodyfont
 Platform, build and test engineer: I find the pain points in how a company builds and tests its
 software and engineer them away, especially in old code. For five years I've done
-that for NanoDiffract, a decades-old, 2M+ line C++ metrology package in a Windows shop, and I'm the
+that for AiDiffract (formerly NanoDiffract), a decades-old, 2M+ line C++ metrology package in a Windows shop, and I'm the
 person its teams come to for pipelines, build machines, test infrastructure, and the problems that
 don't belong to anyone else. Self-taught, with a background in philosophy and classics; I also led the company's developer book club.
 
@@ -63,12 +63,12 @@ don't belong to anyone else. Self-taught, with a background in philosophy and cl
             \tech{{\href{https://azure.microsoft.com/en-us/products/devops}{Azure DevOps}}}\slashsep
             \tech{RHEL}
             \begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
-            \item Designed and built, \textbf{over five years}, the regression-testing system \textbf{every NanoDiffract engineer (\textasciitilde 30) relies on}: a pytest-based tool that generates per-build reference results, stores them in PostgreSQL, and runs PR validation and post-merge regressions on the cluster. Moved its database and recipe packages to RHEL.
+            \item Designed and built, \textbf{over five years}, the regression-testing system \textbf{every AiDiffract engineer (\textasciitilde 30) relies on}: a pytest-based tool that generates per-build reference results, stores them in PostgreSQL, and runs PR validation and post-merge regressions on the cluster. Moved its database and recipe packages to RHEL.
             \item Built its desktop GUI (PySide6, Cython), in use at \textbf{five leading chipmakers} and rolling out to every Onto customer.
             \item Built tooling on top of it: automated bisection across official builds that finds the build behind a result change \textbf{in minutes} (once a manual, build-by-build hunt), a benchmark harness with statistical significance testing, and a memory monitor: a small HTTP server in C on each blade that the head node polls for memory use.
             \item Automated recovery of wedged and lost nodes in the cluster management system for application developers, and upgraded its agent to .NET 8. Traced erratic behavior on 80 nodes to a faulty port on the server rack.
-            \item Own the build infrastructure: provision and maintain the build machines, write the teams' Azure DevOps pipelines, and led compiler and dependency upgrades (including Intel MKL) and a build-system redesign. Cleared \textbf{$\sim$7,000 compiler warnings} across NanoDiffract by hand.
-            \item Rewrote NanoDiffract's neural net inference as a \textbf{Python C extension} so ML engineers could analyze RCWA results.
+            \item Own the build infrastructure: provision and maintain the build machines, write the teams' Azure DevOps pipelines, and led compiler and dependency upgrades (including Intel MKL) and a build-system redesign. Cleared \textbf{$\sim$7,000 compiler warnings} across AiDiffract by hand.
+            \item Rewrote AiDiffract's neural net inference as a \textbf{Python C extension} so ML engineers could analyze RCWA results.
             \item Helped build the AutoML product's test suite, adding speed-ups, automated PDF reports, and faster file reading.
             \item Now: a leaner results schema, node memory data in a redesigned history app, and new test recipe packaging.
             \end{itemize}
